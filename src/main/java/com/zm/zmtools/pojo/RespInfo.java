@@ -28,9 +28,6 @@ public class RespInfo implements Serializable {
      * 返回数据
      */
     private Object data;
-
-    public RespInfo() {
-    }
     
     /**
      * 有数据的返回构造
