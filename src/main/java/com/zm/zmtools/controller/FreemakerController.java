@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
+import com.zm.zmtools.common.SSHUtils;
 import com.zm.zmtools.config.ServerSetting;
 import com.zm.zmtools.entity.TblUserInfo;
 import com.zm.zmtools.pojo.RespInfo;
@@ -36,6 +37,20 @@ public class FreemakerController {
 
     @GetMapping(value = "hello2")
     public String thyIndex(ModelMap model) {
+    	SSHUtils sshUtil;
+		try {
+			sshUtil = new SSHUtils("", "root", "");
+			//String res1 = sshUtil.runShell("docker run -d vmetrio/ubuntu:16.04\n", "utf-8");
+			//String res2 = sshUtil.runShell("docker start 4877ad235cad\n", "utf-8");
+			String res3 = sshUtil.runShell("docker ps\n", "utf-8");
+	        //System.out.println(res1);
+	        //System.out.println(res2);
+	        System.out.println(res3);
+	        sshUtil.close();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         model.addAttribute("setting", serverSetting);
         return "index";
     }
