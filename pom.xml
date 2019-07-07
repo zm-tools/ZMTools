@@ -49,8 +49,6 @@
             <!--<version>2.0.1</version>-->
         <!--</dependency>-->
 
-
-
         <!--mybatis-puls集成-->
         <dependency>
             <groupId>com.baomidou</groupId>
@@ -64,7 +62,6 @@
             <version>3.0.5</version>
         </dependency>
 
-
         <!-- druid集成 -->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -76,8 +73,6 @@
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
         </dependency>
-
-
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -104,7 +99,20 @@
 		  <artifactId>jsch</artifactId>
 		  <version>0.1.55</version>
 		</dependency>
-  		
+
+        <!-- shiro -->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring</artifactId>
+            <version>1.4.0</version>
+        </dependency>
+
+        <!-- shiro+redis缓存插件 -->
+        <dependency>
+            <groupId>org.crazycake</groupId>
+            <artifactId>shiro-redis</artifactId>
+            <version>3.1.0</version>
+        </dependency>
 
     </dependencies>
 
