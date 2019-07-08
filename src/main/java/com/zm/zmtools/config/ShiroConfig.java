@@ -44,7 +44,7 @@ public class ShiroConfig {
         //需要登录的接口
         //设置一些访问的规则 访问某个需要登录的界面但是用户没有登录 调用此接口。
         //接口路径名，   如果不是前后端分离 访问的是页面路径
-        factoryBean.setLoginUrl("/pub/need_login");//这个写的是 登录的接口
+        factoryBean.setLoginUrl("/login");//这个写的是 登录的接口
 
         //登录成功后 跳转的URL 如果是前后端分离 调用这个没用
         factoryBean.setSuccessUrl("/");
@@ -64,6 +64,7 @@ public class ShiroConfig {
         //退出过滤器
         map.put("/logout", "logout");
         //匿名可以访问 游客模式  anon 都是放行
+        map.put("/login/**", "anon");
         map.put("/pub/**", "anon");
         map.put("/app/**", "anon");
 

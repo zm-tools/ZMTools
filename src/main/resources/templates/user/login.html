@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+	.divForm{
+	position: absolute;/*绝对定位*/
+	width: 300px;
+	height: 200px;
+	
+	border: 1px solid blue;
+	text-align: center;/*(让div中的内容居中)*/
+	top: 50%;
+	left: 50%;
+	margin-top: -200px;
+	margin-left: -150px;
+	}
+	</style>
+    
+</head>
+<body>
+	<div class="divForm">
+	<form id="login_form" th:action="@{/login/submit}" method="get">
+			<span th:text="${error}"></span>
+			<br><br>
+            <!-- 个人邮箱 -->
+            <div class="form-group has-feedback">
+                <input id="username" name="username" class="form-control" placeholder="请输入您的电子邮件">
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            </div>
+			<br><br>
+            <!-- 密码 -->
+            <div class="form-group has-feedback">
+                <input type="password" id="password" name="password" class="form-control" placeholder="密    码">
+                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            </div>
+			<br><br>
+            <!-- 登录 -->
+            <div class="form-group pull-right">
+            	
+                <button type="submit" class="btn btn-primary btn-block btn-flat">登录</button>
+            </div>
+        </form>
+	</div>
+</body>
+</html>

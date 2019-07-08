@@ -32,7 +32,7 @@ public class FreemakerController {
     public String freeIndex(ModelMap model) {
         model.addAttribute("setting", serverSetting);
 
-        return "freemark/index";
+        return "index";
     }
 
     @GetMapping(value = "hello2")
